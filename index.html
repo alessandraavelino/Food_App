@@ -41,7 +41,7 @@
               </div>
             </div>
           </nav>
-          
+
           <!--Carrossel de imagens-->
           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -78,47 +78,46 @@
                 <h1>Nossos Lanches 🍔🍟</h1>
               </div>
               <div class="text-right p-4">
-                <button type="button" class="btn btn-danger rounded-circle" id="newBtnFood" data-bs-toggle="modal" data-bs-target="#formFoodModal" onclick="loadFormCreateFood()">+</button>
+                <button type="button" class="btn btn-danger rounded-circle" id="newBtnFood" data-bs-toggle="modal" data-bs-target="#formFoodModal">+</button>
               </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="formFoodModal" tabindex="-1" aria-labelledby="formFoodLabel" aria-hidden="true">
-    <form id="formFood">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="formFoodLabel">Nova Comida</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+  <div class="modal fade" id="formFoodModal" tabindex="-1" aria-labelledby="#formFoodModal" aria-hidden="true">>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Adicionar novo item</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="food-name">Nome:</label>
+                <input type="text" class="form-control" id="food-name" name="name">
               </div>
-              <div class="modal-body">
-                <div class="form-group">
-                  <label for="food-name">Nome:</label>
-                  <input type="text" class="form-control" id="food-name" name="name">
+              <div class="form-group">
+                  <label for="food-descricao">Descrição:</label>
+                  <input type="text" class="form-control" id="food-descricao" name="descricao">
                 </div>
                 <div class="form-group">
-                    <label for="food-descricao">Descrição:</label>
-                    <input type="text" class="form-control" id="food-descricao" name="descricao">
-                  </div>
-                  <div class="form-group">
-                    <label for="food-preco">Preço:</label>
-                    <input type="number" class="form-control" id="food-preco" name="preco">
-                  </div>
-                <div class="form-group">
-                  <label for="food-image">Endereço da imagem:</label>
-                  <input type="text" class="form-control" id="food-image" name="image">
+                  <label for="food-preco">Preço:</label>
+                  <input type="number" class="form-control" id="food-preco" name="preco">
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Limpar</button>
-                <button type="submit" class="btn btn-success btn-primary">Cadastrar</button>
+              <div class="form-group">
+                <label for="food-image">Endereço da imagem:</label>
+                <input type="text" class="form-control" id="food-image" name="image">
               </div>
             </div>
-          </div>
-      </form>
-      
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Limpar</button>
+          <button type="submit" class="btn btn-success btn-primary">Cadastrar</button>
+        </div>
+      </div>
+    </div>
   </div>
             
     <!-- Cartões com os itens-->
